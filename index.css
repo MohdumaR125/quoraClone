@@ -25,6 +25,8 @@ div{
 
 
 
+
+
 /* divTop */
 .DivTop{
     box-sizing: border-box;
@@ -36,6 +38,8 @@ div{
     align-items: center;
     font-weight: 600;
 }
+
+
 
 
 
@@ -59,52 +63,19 @@ div{
     padding-left: 16px;
 
 }
-.BottomInFirst{
+.BottomInDiv{
     display: flex;
     align-items: center;
     padding-top: 8px;
     padding-bottom: 8px;
     flex: auto;
-    
 }
 
-.BottomInSecond{
-    display: flex;
-    align-items: center;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    flex: auto;
-   
-}
-
-.BottomInThird{
-    display: flex;
-    align-items: center;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    flex: auto;
-    
-}
-.BottomInFourth{
-    display: flex;
-    align-items: center;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    flex: auto;
-    
-}
-.BottomInFifth{
-    display: flex;
-    align-items: center;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    flex: auto;
-    
-}
 .input{
     margin-right: 8px;
     display: inline-flex;
 }
+
 input{
     display: inline-block;
     width: 16px;
