@@ -106,5 +106,23 @@ ul li:hover{
     margin-right: 350px;
 }
 
+#bodyBox{
+
+    display: grid;
+    grid-template-columns: 150px 500px 350px;
+    gap: 25px;
+    height: 100vh;
+    margin-top: 100px;
+    margin-left: 220px;
+
+}
+#bodyBox>div{
+    border: 1px solid black;
+}
+leftside tr{
+    height: 50px;
+    border: 1px solid black;
+}
+
 
 
