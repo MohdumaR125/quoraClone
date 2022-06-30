@@ -18,7 +18,7 @@
                </div>
                <div class="DivBottom">
                    <div class="BottomIn">
-                        <div class="BottomInDiv">
+                        <div class="BottomInDiv"  id="Firstrow">
                             <div class="input">
                                 <input type="checkbox"  />
                             </div>
@@ -71,9 +71,160 @@
             </div>
         </div>
     </div>
+   
+
+    <div class="popup">
+        <div class="popup_content">
+            <div class="container1">
+                <div class="topone">
+                   <div class="closeImg">
+                    <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png" alt="close">
+                   </div>
+                </div>
+                <div>
+                    <div class="h2">
+                       <div> <h2>Suggested Spaces to Follow</h2> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container2">
+                <div class="down">
+                    <div class="imgpopup">
+                        <img src="https://qphs.fs.quoracdn.net/main-thumb-ti-1586670-100-iflkaqjwbgpunuxoeneqekxtppuxukqm.jpeg" alt="">
+                    </div>
+                    <div class="downmain">
+                        <div>
+                            <h3>Books that influenced You</h3>
+                        </div>
+                        <div  id="follow">
+                            <p>233.8K followers</p>
+                            <p>8 posts today</p>
+                        </div>
+                        <div>
+                            <p>Only mention about Book</p>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="down">
+                    <div class="imgpopup">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/b/bf/Lal_Bahadur_Shastri_National_Academy_of_Administration_Logo.png" alt="">
+                    </div>
+                    <div class="downmain">
+                        <div>
+                            <h3>Way to LBSNAA</h3>
+                        </div>
+                        <div  id="follow">
+                            <p>33.8K followers</p>
+                            <p>18 posts today</p>
+                        </div>
+                        <div>
+                            <p>Space for Officers</p>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="down">
+                    <div class="imgpopup">
+                        <img src="https://i.inews.co.uk/content/uploads/2019/06/actor-adult-businessman-327533-640x360.jpg" alt="img">
+                    </div>
+                    <div class="downmain">
+                        <div>
+                            <h3>Entrepreneurship</h3>
+                        </div>
+                        <div  id="follow">
+                            <p>133.8K followers</p>
+                            <p>28 posts today</p>
+                        </div>
+                        <div>
+                            <p>Entrepreneur Stories and Tips for Business Growth</p>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="down">
+                    <div class="imgpopup">
+                        <img src="https://www.forbesindia.com/fbimages/900x600/proportional/jpeg/media/images/2010/Feb/topimg_982_rakesh_jhunjhunwala.jpg" alt="img">
+                    </div>
+                    <div class="downmain">
+                        <div>
+                            <h3>Stock Market in India</h3>
+                        </div>
+                        <div  id="follow">
+                            <p>273.8K followers</p>
+                            <p>14 posts today</p>
+                        </div>
+                        <div>
+                            <p>Everything about Indian stock market</p>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="down">
+                    <div class="imgpopup">
+                        <img src="https://scontent.fbom10-2.fna.fbcdn.net/v/t1.18169-9/11058612_10153203191804809_5791422073867307648_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=HY0lkXnTdh8AX_REDvu&_nc_oc=AQnqpo0pTnSmEJ-GXUrs2ovY4lcaM6RpgY-aL-IeBWbok_qmAUNWfmb8I3z19ruR14U&_nc_ht=scontent.fbom10-2.fna&oh=00_AT-ZLBye4E5cf_wRsEdDhGgXx4WaCR3z86mkmS_fd0vlsw&oe=62E3923E" alt="img">
+                    </div>
+                    <div class="downmain">
+                        <div>
+                            <h3>Dhandha Founders</h3>
+                        </div>
+                        <div  id="follow">
+                            <p>133.8K followers</p>
+                            <p>28 posts today</p>
+                        </div>
+                        <div>
+                            <p>Entrepreneurship & Startup Strategy | Business Updates & News </p>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="down">
+                    <div class="imgpopup">
+                        <img src="https://www.edgetek.co/images/retail_it.png" alt="img">
+                    </div>
+                    <div class="downmain">
+                        <div>
+                            <h3>All about E-Commerce</h3>
+                        </div>
+                        <div  id="follow">
+                            <p>27.8K followers</p>
+                            <p>20 posts today</p>
+                        </div>
+                        <div>
+                            <p>Join this space to get daily updates</p>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <div class="popup">
+        <div>
+            <div>
+                <div class="closeImg">
+                    <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-close-512.png" alt="close">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
 </body>
 </html>
 
 <Script>
-    
+    document.getElementById("Firstrow").addEventListener("click",function(){
+        document.querySelector(".popup").style.display = "flex";
+        document.querySelector(".BottomIn").style.textDecoration = "line-through";
+
+    });
+    document.querySelector(".closeImg").addEventListener("click",function(){
+        document.querySelector(".popup").style.display = "none";
+        document.querySelector(".BottomIn").style.textDecoration = "none";
+
+    });
+
 </Script>
