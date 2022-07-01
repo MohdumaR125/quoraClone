@@ -74,61 +74,30 @@ feedData=[
         img_url:"https://qphs.fs.quoracdn.net/main-qimg-b86bd503d8b27d59826b69f2268a47b6-lq",
     },
     {
-        profilepic:"" ,
-        name:"" ,
-        tag:"",
-        heading:"",
-        postdata:"",
-        img_url:"",
+        profilepic:"	https://qphs.fs.quoracdn.net/main-thumb-968857558-50-cpnralusamxccujbvkpfkgywlyrurdbe.jpeg" ,
+        name:"Akanksha Mishra (akanmis149)" ,
+        tag:"Studied at University of Delhi (Graduated 2020)  Updated 8m",
+        heading:"What will the UPSC failures do?",
+        postdata:"On the same day of the result I saw this tweet. He wrote,'Don’t know what is written in destiny'",
+        img_url:"https://qphs.fs.quoracdn.net/main-qimg-fa60919c85944f0f16cc5b1d4703d17d-lq",
     },
     {
-        profilepic:"" ,
-        name:"" ,
-        tag:"",
-        heading:"",
-        postdata:"",
-        img_url:"",
+        profilepic:"https://qphs.fs.quoracdn.net/main-thumb-109432561-50-zehmqvqswlufurocmuuijinvmzmdtmlf.jpeg" ,
+        name:"Sidd Sharma" ,
+        tag:"2y",
+        heading:"What is the shortest and cheapest operating flight in India?",
+        postdata:"I present to you the one dollar flight in India. All aboard the flight to nowhere! Although the flight takes you nowhere, you get the full flight experience for a dollar :) ",
+        img_url:"https://qphs.fs.quoracdn.net/main-qimg-f9ac836d463a2f510bd8837d7ce46c05-lq",
     },
     {
-        profilepic:"" ,
-        name:"" ,
-        tag:"",
-        heading:"",
-        postdata:"",
-        img_url:"",
+        profilepic:"https://qphs.fs.quoracdn.net/main-thumb-2355058-50-mffjyumnhcycpdqiqosvtgckcmeynarc.jpeg" ,
+        name:"Balaji Viswanathan" ,
+        tag:"Lives in Bengaluru, Karnataka, India (2016–present)",
+        heading:"What if we have a golden triangle between Hyderabad, Bengaluru and Chennai? Will it be more successful than the Delhi-Mumbai industrial corridor?",
+        postdata:"We have to go beyond just the HYD-BLR - CHN triangle and look to build a lot of new triangles of developments across India. I envision new development in 6 triangles. If we put a lot of emphasis on growing these triangles there will be enormous side benefits. These triangles impact the Delhi-Mumbai corridor.",
+        img_url:"https://qphs.fs.quoracdn.net/main-qimg-825a45a0f9b8206f0b04b549dc589469-pjlq",
     },
-    {
-        profilepic:"" ,
-        name:"" ,
-        tag:"",
-        heading:"",
-        postdata:"",
-        img_url:"",
-    },
-    {
-        profilepic:"" ,
-        name:"" ,
-        tag:"",
-        heading:"",
-        postdata:"",
-        img_url:"",
-    },
-    {
-        profilepic:"" ,
-        name:"" ,
-        tag:"",
-        heading:"",
-        postdata:"",
-        img_url:"",
-    },
-    {
-        profilepic:"" ,
-        name:"" ,
-        tag:"",
-        heading:"",
-        postdata:"",
-        img_url:"",
-    },
+    
 ]
 
 displayFeed(feedData);
@@ -136,22 +105,35 @@ displayFeed(feedData);
 function displayFeed(data){
     data.map(function(elem){
         var headingDiv= document.createElement("div");
-        headingDiv.setAttribute("id","postHeading");
+        headingDiv.setAttribute("class","postHeading");
         var profilepic=document.createElement("img");
         profilepic.setAttribute("src",elem.profilepic);
+
+        var ppdiv=document.createElement("div");
+
+        var namediv= document.createElement("div");
+        namediv.setAttribute("class","nameDiv");
+
+        var tagdiv=document.createElement("div");
+
+        var ntdiv= document.createElement("div");
+        ntdiv.setAttribute("class","nameandtag");
         
         var Name=document.createElement("p");
         Name.innerText=elem.name;
+        Name.setAttribute("class","name");
 
         var follow= document.createElement("p");
         follow.innerText="Follow";
+        follow.setAttribute("class","follow");
 
         var Tag= document.createElement("p");
         Tag.innerText=elem.tag;
 
         var postDiv=document.createElement("div");
+        postDiv.setAttribute("class","postDivision")
 
-        var Heading= document.createElement("h3");
+        var Heading= document.createElement("h4");
         Heading.innerText=elem.heading;
 
         var Postdata=document.createElement("p");
@@ -160,10 +142,23 @@ function displayFeed(data){
         var postImage=document.createElement("img");
         postImage.setAttribute("src",elem.img_url);
 
-        headingDiv.append(profilepic,Name,follow,Tag);
-        postDiv.append(Heading,Postdata,postImage);
+        var postImageDiv=document.createElement("div");
+        postImageDiv.append(postImage);
+        postImageDiv.setAttribute("class","postimage");
 
-        document.getElementById("feed").append(headingDiv,postDiv);
+        namediv.append(Name,follow);
+        tagdiv.append(Tag);
+        ntdiv.append(namediv,tagdiv);
+        ppdiv.append(profilepic);
 
+        headingDiv.append(ppdiv,ntdiv);
+        postDiv.append(Heading,Postdata,);
+
+        var fullPostDiv=document.createElement("div");
+        fullPostDiv.setAttribute("class","post");
+       fullPostDiv.append(headingDiv,postDiv,postImageDiv);
+       document.getElementById("feed").append(fullPostDiv);
     })
 }
+
+
