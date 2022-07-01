@@ -119,10 +119,40 @@ ul li:hover{
 #bodyBox>div{
     border: 1px solid black;
 }
-leftside tr{
-    height: 50px;
-    border: 1px solid black;
+#leftside>table{
+    border-collapse: collapse;
+    color: gray;
+    font-size: 15px;
+    font-weight: lighter;
+}
+#leftside th{
+    font-weight: lighter;
+}
+#leftside tr{
+    height: 35px;
+}
+#leftside tr:hover{
+    background-color:rgb(211, 208, 208);
+}
+#leftside td{
+    padding: 8px;
 }
 
 
+.leftimage{
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+}
 
+#feed{
+    display: block;
+    grid-template-rows: 80px 400px;
+}
+#postHeading{
+    display: flex
+}
+#postHeading>img{
+    display: inline;
+
+}
