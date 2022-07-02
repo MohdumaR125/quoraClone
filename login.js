@@ -10,7 +10,7 @@ document.querySelector('form').addEventListener('submit', login);
      registeredUser.forEach(userData => {
          if(userData.email === enteredEmail  && userData.password === enteredPassword){
              flag = true;
-            //  window.location.href = '';
+             window.location.href = 'homepage.html';
          }
      });
      if(flag){
