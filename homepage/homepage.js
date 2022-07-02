@@ -1,3 +1,4 @@
+
 var leftData=[
     {
         image_url: "https://qph.cf2.quoracdn.net/main-thumb-t-5488-100-3xdwG0xXYXFkIQpIO4ZhoMLOHQE3ASFk.jpeg" ,
@@ -47,7 +48,7 @@ var leftData=[
 
 displayLeftSide(leftData);
 
-function displayLeftSide(data){
+function displayLeftSide(data){ 
     data.map(function(elem){
         var tr=document.createElement("tr");
        var td1=document.createElement("td");
